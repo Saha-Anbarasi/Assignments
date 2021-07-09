@@ -1,0 +1,46 @@
+public class Empdetails
+{  
+	private String EmpName;
+	private int EmpAge;
+	private int EmpExperience;
+	
+	public String getEmpName() {
+		return EmpName;
+	}
+	
+	public void setEmpName(String empName) {
+		EmpName = empName;
+	}
+
+	public int getEmpAge() {
+		return EmpAge;
+	}
+
+	public void setEmpAge(int empAge) {
+		EmpAge =empAge ;
+	}
+
+	public int getEmpExperience() {
+		return EmpExperience;
+	}
+
+	public void setEmpExperience(int empExperience) {
+		EmpExperience = empExperience;
+	}
+//} 
+
+//public class TestEmpdetails
+//{
+	public static void main(String [] args)
+	{
+		Empdetails obj=new Empdetails();
+		obj.setEmpName("EmpA");  
+		obj.setEmpAge(23);
+		obj.setEmpExperience(0);
+
+	  System.out.println("Emp name:"+obj.getEmpName());
+	  System.out.println("Emp age:"+obj.getEmpAge());
+	  System.out.println("Emp experince:"+obj.getEmpExperience());
+	}
+}
+
