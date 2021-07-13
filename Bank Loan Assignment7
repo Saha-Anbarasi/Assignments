@@ -1,0 +1,123 @@
+import java.util.Scanner;
+interface Iloan
+{
+	void homeloan();
+	void vehicleloan();
+}
+abstract class Bankloan implements Iloan
+{    int income;
+	 Bankloan()
+	 {
+		 //this.income=income;
+	 }
+     public int getincome()
+	 {
+		 return income;
+	 }
+	 public void setincome(int income)
+	 {
+		 this.income=income;
+	 }
+   
+	public void homeloan()
+	{
+		if(income>30000)
+		System.out.println("You can avail this loan by Bank");
+		else 
+        System.out.println("No loan  by Bankloan");
+    }
+	public void vehicleloan()
+	{
+		if(income>40000)
+			System.out.println("You can avail this loan by Bank");
+		else
+        System.out.println("No loan  by Bankloan"); 
+       
+    }
+	 abstract double calcIntrest( int income);
+}
+class HomeLoan extends Bankloan
+{   int income;
+	HomeLoan()
+	{
+		//sper(income);
+	}
+	public double calcIntrest(int amt)
+	{
+	return ((double)amt*.095);
+	}
+	public void homeloan()
+	{
+		if(super.getincome()>30000)
+		System.out.println("You can avail this loan by home loan section with intrest"+calcIntrest(200000));
+		else 
+        System.out.println("No loan  homeloan");
+    }
+	
+}
+	
+class VehicleLoan extends Bankloan
+{     int income;
+	VehicleLoan()
+	{
+		//super( income);
+	}
+	public double calcIntrest(int amt)
+	{
+		return ((double)amt*0.105);
+	}
+	public void vehicleloan(int i)
+	{
+		if(super.getincome()>40000)
+			System.out.println("You can avail this loan by vehicle loan section with intrest"+calcIntrest(1600000));
+		else
+        System.out.println("no loan vehicleLoan"); 
+       
+    }
+	
+}
+public class Loanpayment
+{
+ private static Scanner ip;
+public static void main (String args[])
+ {   try (Scanner ip = new Scanner(System.in)) {
+	//System.out.println("Enter the number of customers for vehicle loan");
+	   //int size=ip.nextInt();
+	   // Bankloan ar=new Bankloan();
+	   Bankloan  arr=new VehicleLoan();
+	   System.out.println("Enter Monthly income");
+         int inc=ip.nextInt();
+         arr.setincome(inc);
+         arr.vehicleloan();
+          System.out.println("Enter Monthly income");
+         int in=ip.nextInt();
+      
+	    Bankloan ar=new HomeLoan();
+	    ar.setincome(in);
+        ar.homeloan();
+}
+
+	  int size = 0;
+	VehicleLoan  arr1[]=new VehicleLoan[size];
+	   
+	   for(int i=0;i<size;i++)
+	   { System.out.println("Enter Monthly income");
+         ip = null;
+		int inc=ip.nextInt();
+         arr1[i].setincome(inc);
+        
+	     arr1[i].vehicleloan( arr1[i].getincome());
+	   }
+	   System.out.println("Enter the number of customers for Home loan");
+	   HomeLoan ar[]=new HomeLoan[size];
+	   //int size=ip2.nextInt();	   
+	   for(int i=0;i<size;i++)
+	   { System.out.println("Enter Monthly income");
+         int inc = 0;
+		//int inc=ip2.nextInt();
+          ar[i].setincome( inc);
+          ar[i].homeloan();
+	   }
+	   
+ }
+} 
