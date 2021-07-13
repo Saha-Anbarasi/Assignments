@@ -1,0 +1,48 @@
+interface intfacA
+{
+    void shapeName();
+
+	void shapename();
+}
+  
+interface intfacB 
+{
+    void shapesize();
+}
+  
+interface intfC extends intfacA, intfacB 
+{
+    void shapecolour();
+}
+  
+class s1 implements intfC
+{
+    public void shapeName()
+    {
+        System.out.println("Square");
+    }
+  
+    public void shapesize()
+    {
+        System.out.println("3*3");
+    }
+  
+    public void shapecolour()
+    {
+        System.out.println("Blue");
+    }
+      
+    public static void main (String[] args)
+    {
+        s1 ob1 = new s1();
+
+        ob1.shapeName();
+        ob1.shapesize();
+        ob1.shapecolour();
+    }
+
+	@Override
+	public void shapename() {
+		
+	}
+}
