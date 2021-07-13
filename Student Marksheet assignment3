@@ -1,0 +1,94 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class student11
+{
+   private String name;
+   private int id;
+   private int ass1[]=new int[4];
+   private int ass2[]=new int[4];
+   public void getvalue()
+   {
+    try (Scanner ip = new Scanner(System.in)) {
+		System.out.print("Enter The Name");
+		name=ip.nextLine();
+		System.out.print("Enter The Id");
+		id=ip.nextInt();
+		System.out.print("Enter The Marks in phy chem bio and maths for assess1");
+		for(int i=0;i<ass1.length;i++)
+		{
+		ass1[i]=ip.nextInt();
+		}
+		System.out.println("Enter The Marks in phy chem bio and maths for assess2");
+		for(int i=0;i<ass2.length;i++)
+		 {
+		 ass2[i]=ip.nextInt();
+		}
+	}
+   }
+   
+  public int[]total(int []a1,int []a2)
+  { int []t =new int[4];
+    for(int i=0;i<a1.length;i++)
+	{ t[i]=a1[i]+a2[i];
+        }
+	return t;
+  }
+  public  int totalsum() throws UserdefException
+   {   int sum=0;
+       int []t=total(ass1,ass2);
+
+       for(int i=0;i<t.length;i++)
+	 { sum=sum+t[i];
+         }
+      try
+       {
+       if (sum<200)
+       {
+       throw new UserdefException("!!Marks low Bellow 200!!");
+       }
+       }
+       catch(UserdefException e)
+       { 
+       throw e;
+       }
+       finally
+       {
+        System.out.println("Marks "+sum);
+       }
+        return sum;
+ } 
+          public void display() throws UserdefException
+           {
+              System.out.println("The name of student is "+name);
+              System.out.println("The id Of student is "+id);
+              System.out.println("The Total marks is"+Arrays.toString(total(ass1,ass2)));
+              System.out.println("The Cummulative marks is"+totalsum());
+           }
+     
+   public static void main(String []arg)
+   {
+	   student11 s=new student11();
+	   s.getvalue();
+	   try 
+	   {
+     s.display();		  
+	   }
+	   catch(UserdefException e)
+	   {
+		   System.out.println("The student is not allowed to write end semester"+e.getMessage());
+	   }
+   }
+
+class UserdefException extends Exception
+{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public UserdefException(String s)
+    {
+        // Call constructor of parent Exception
+        super(s);
+    }
+}}
