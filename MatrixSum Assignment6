@@ -1,0 +1,57 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class Matsum{
+	
+public static int [][] sum(int [][]a,int [][] b)
+{ 
+ int [][] x=new int[3][3];
+  for(int i=0;i<a.length;i++)
+  { 
+    for (int j=0;j<a[i].length;j++)
+	{x[i][j]=a[i][j]+b[i][j];
+	}
+  }
+  return (x);
+}
+public static void main (String[] arg)
+{    try (Scanner s = new Scanner(System.in)) {
+	new Matsum();
+	 int [][] a=new int[2][2];
+	 int [][] b=new int[2][2];
+	 System.out.println("enter elements of  First Matrix");
+	for (int i=0;i<a.length;i++)
+	{
+		for(int j=0;j<a[i].length;j++)
+		{
+			a[i][j]=s.nextInt();
+		}
+	}
+
+	for (int i = 0; i < a.length; i++)
+	
+		{
+				System.out.println(Arrays.toString(a[i]));
+	
+		}	
+		System.out.println("enter elements of  Secind Matrix");
+		
+	for (int i=0;i<b.length;i++)
+	{
+		for(int j=0;j<b[i].length;j++)
+		{
+			b[i][j]=s.nextInt();
+		}
+	}
+	for (int i = 0; i < b.length; i++)
+			System.out.println(Arrays.toString(b[i]));
+		// System.out.println("enter elements of  First Matrix");
+	int [][]x=Matsum.sum(a,b);
+	System.out.println("THE SUM IS");
+
+	for (int i = 0; i < x.length; i++)
+			System.out.println(Arrays.toString(x[i]));
+}
+	
+}
+}
+	
