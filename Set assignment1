@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class set1
+{
+	public static void main(String[] args) {
+		
+		Set<String> set = new HashSet<String>();
+		
+		set.add("Square");
+		set.add("Triangle");
+		set.add("Circle");
+		set.add("Rhombus");
+		
+		
+		System.out.println("Set : " + set);
+		
+		System.out.println("The size of Set is = " + set.size());
+	}
+}
