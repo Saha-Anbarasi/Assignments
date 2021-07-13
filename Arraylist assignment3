@@ -1,0 +1,30 @@
+import java.util.List;
+import java.util.ArrayList;
+  
+public class arraylist3
+{
+    public static void main(String[] args)
+    {
+        List<Integer> AL3 = new ArrayList<>();
+        AL3.add(10);
+        AL3.add(20);
+        AL3.add(30);
+        AL3.add(100);
+        AL3.add(20);
+        AL3.add(11);
+        AL3.add(45);
+  
+        System.out.println("ArrayList = " + AL3);
+        
+      boolean remove = AL3.remove(new Integer(20));
+      boolean remove1 = AL3.remove(new Integer(20));
+      
+       System.out.println("Modified ArrayList before adding = " + AL3);
+       
+      AL3.add(33);
+      AL3.add(41);
+      AL3.add(05);
+      
+      System.out.println("Final modified ArrayList = " + AL3);
+    }
+}
