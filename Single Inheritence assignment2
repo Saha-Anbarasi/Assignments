@@ -1,0 +1,25 @@
+class parent {
+    public void print_parentclass() 
+    {
+        System.out.println("This is parent class.");
+    }
+}
+ 
+class child2 extends parent {
+    public void print_childclass() 
+    {
+    	System.out.println("This is child class.");
+    	System.out.println("This is single inheritance.");
+    }
+}
+
+public class singleinheritance {
+    public static void main(String[] args)
+    {
+        child2 c2 = new child2();   
+        c2.print_parentclass();     
+        c2.print_childclass();
+    }
+    
+}
+
