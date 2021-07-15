@@ -1,0 +1,26 @@
+import java.util.HashMap;
+
+class HashMap2{
+	public static  void main(String[] args) 
+	{
+		HashMap<String, Integer> HM1 = new HashMap<>();
+		
+		HashMap<String, Integer> HM2 = new HashMap<String, Integer>();
+		
+		HM1.put("Candidate1.1\n", 001);
+		HM1.put("Candidate1.2\n", 002);
+		HM1.put("Candidate1.3\n", 003 );
+		HM1.put("Candidate1.4\n", 004 );
+		HM1.put("Candidate1.5\n", 005 );
+		
+		HM2.put("Candidate2.1", 201);
+		HM2.put("Candidate2.2", 202);
+		HM2.put("Candidate2.3", 203);
+		HM2.put("Candidate2.4", 204);
+		HM2.put("Candidate2.5", 205);
+		
+		System.out.println("The list of Candidates under Mapping1 \n" + HM1);
+		System.out.println("The list of Candidates under Mapping2 \n" + HM2);
+	
+	}
+}
