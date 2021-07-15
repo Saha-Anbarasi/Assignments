@@ -1,0 +1,21 @@
+import java.util.HashMap;
+
+public class hashmapnull
+{
+	
+	public static void main(String[] args) 
+	
+	{
+		HashMap<String, Integer> map = new HashMap<>();
+		
+		map.put(null, null);
+	}
+	
+	{
+		System.out.println ("The value of the HashMap is"+ map());
+	}
+
+	private String map() {
+		return map();
+	}
+}
